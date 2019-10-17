@@ -9,7 +9,13 @@ import org.samarthya.interfaces.InterfaceTwo;
  * Hello world!
  */
 public class App {
+    /**
+     * Example main application.
+     *
+     * @param args
+     */
     public static void main(String[] args) {
+
         TestOneImpl tOne = new TestOneImpl();
         System.out.println(TestOneImpl.sayHello());
         System.out.println(InterfaceOne.sayHello());
