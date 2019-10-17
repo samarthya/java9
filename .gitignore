@@ -1,4 +1,3 @@
 # Ignore all the classes in target
 /target
 /out
-**/*.class
