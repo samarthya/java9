@@ -4,4 +4,6 @@ public interface InterfaceOne {
     static String sayHello() {
         return (" Hello from " + InterfaceOne.class.getName());
     }
+
+    String Salute(String message);
 }

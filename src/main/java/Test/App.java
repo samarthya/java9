@@ -12,7 +12,7 @@ public class App {
     /**
      * Example main application.
      *
-     * @param args
+     * @param args Arguments to the program.
      */
     public static void main(String[] args) {
 
@@ -22,10 +22,12 @@ public class App {
         System.out.println(InterfaceTwo.sayHello());
 
         testOne();
+        System.out.println(tOne.Salute());
+        System.out.println(tOne.Salute("Bonjour "));
     }
 
     private static void testOne() {
-        StringBuffer myStringIndex = new StringBuffer("ABCDEF123456");
+        StringBuilder myStringIndex = new StringBuilder("ABCDEF123456");
         System.out.println(" String: " + myStringIndex.toString());
         System.out.println(" Length: " + myStringIndex.length());
         System.out.println(" Char [0]" + myStringIndex.toString().charAt(0));

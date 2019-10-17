@@ -12,4 +12,14 @@ public class TestOneImpl implements InterfaceTwo, InterfaceOne {
     public static String sayHello() {
         return (" Hello from " + TestOneImpl.class.getCanonicalName());
     }
+
+    @Override
+    public String Salute(String message) {
+        return " " + message + TestOneImpl.class.getSimpleName();
+    }
+
+    @Override
+    public String Salute() {
+        return " Salutation " + TestOneImpl.class.getSimpleName();
+    }
 }
