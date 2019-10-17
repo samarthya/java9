@@ -5,6 +5,9 @@ import org.samarthya.impl.TestOneImpl;
 import org.samarthya.interfaces.InterfaceOne;
 import org.samarthya.interfaces.InterfaceTwo;
 
+import java.util.Enumeration;
+import java.util.Properties;
+
 /**
  * Hello world!
  */
@@ -15,15 +18,27 @@ public class App {
      * @param args Arguments to the program.
      */
     public static void main(String[] args) {
+        dumpProperties();
 
         TestOneImpl tOne = new TestOneImpl();
         System.out.println(TestOneImpl.sayHello());
         System.out.println(InterfaceOne.sayHello());
         System.out.println(InterfaceTwo.sayHello());
 
+
         testOne();
         System.out.println(tOne.Salute());
         System.out.println(tOne.Salute("Bonjour "));
+    }
+
+    private static void dumpProperties() {
+        Properties props = System.getProperties();
+
+        Enumeration<Object> keys = props.keys();
+        do {
+            Object key = keys.nextElement();
+            System.out.println(" " + key.toString() + " : " + props.get(key));
+        } while (keys.hasMoreElements());
     }
 
     private static void testOne() {
